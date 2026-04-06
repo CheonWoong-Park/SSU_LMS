@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "SSU LMS",
+  "version": "1.1",
+  "description": "LMS에 좋은 기능을 붙여보았습니다.절대 이상한거 아님^^",
+  "host_permissions": [
+    "*://canvas.ssu.ac.kr/*",
+    "*://commons.ssu.ac.kr/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://canvas.ssu.ac.kr/*",
+        "*://commons.ssu.ac.kr/*"
+      ],
+      "js": ["bypass.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ]
+}
